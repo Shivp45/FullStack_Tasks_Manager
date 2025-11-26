@@ -80,7 +80,7 @@ Protected Routes & Auth State
 # Getting Started — Run Locally
 
 ## 1️⃣ Clone the Repository
-git clone https://github.com/Shivp45/fullstack-tasks-app.git
+git clone https://github.com/Shivp45/FullStack_Tasks_Manager.git
 cd fullstack-tasks-app
 
 ## 2️⃣ Backend Setup
