@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base tweaks for light mode */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* ensure inputs/buttons adapt */
+input, textarea, select {
+  @apply border rounded px-3 py-2 bg-white text-gray-900;
+}
+
+/* dark mode global adjustments */
+:root.dark, html.dark, html.dark body {
+  /* background */
+  --bg: #0b1220;
+  --card: #0f1724;
+  --muted: #9ca3af; /* gray-400 */
+  --text: #e5e7eb; /* gray-200 */
+}
+
+/* ensure html.dark applies readable colors */
+html.dark body {
+  background-color: #0b1220 !important;
+  color: #e5e7eb !important;
+}
+
+/* form elements in dark */
+html.dark input, html.dark textarea, html.dark select {
+  background-color: #0f1724 !important;
+  color: #e5e7eb !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* table dark */
+table {
+  border-collapse: collapse;
+}
+thead th {
+  @apply bg-gray-200 text-gray-800;
+}
+html.dark thead th {
+  background-color: #111827 !important;
+  color: #e5e7eb !important;
+}
+
+/* small utility to ensure cards readable */
+.card {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 rounded shadow p-4;
+}
+
+/* buttons */
+.btn {
+  @apply px-3 py-1 rounded;
+}
+.btn-primary {
+  @apply bg-blue-600 text-white;
+}
+.btn-danger {
+  @apply bg-red-600 text-white;
+}
+.btn-ghost {
+  @apply border bg-transparent;
+}
+
+/* small responsive table */
+.table-fixed {
+  width: 100%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
